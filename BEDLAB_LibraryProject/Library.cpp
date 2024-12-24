@@ -10,6 +10,7 @@ Library::Library() : bookCount(0)
 	}
 }
 Library::Library(const int Capacity) : bookCount(0) {
+	delete [] books; // delete the old array
 	books = new Books*[Capacity];
 
 	for (int i = 0; i < Capacity; i++)
